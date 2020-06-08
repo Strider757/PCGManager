@@ -1,0 +1,42 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:PCGManager.Styles">
+
+    <Color x:Key="NiceRedColor">#FF6877</Color>
+    <SolidColorBrush x:Key="NiceRedBrush" Color="{StaticResource NiceRedColor}"/>
+
+    <Color x:Key="SnowWhiteColor">#FFFCF9</Color>
+    <SolidColorBrush x:Key="SnowWhiteBrush" Color="{StaticResource SnowWhiteColor}"/>
+    
+    <Color x:Key="BlueLuneColor">#B1EDE8</Color>
+    <SolidColorBrush x:Key="BlueLuneBrush" Color="{StaticResource BlueLuneColor}"/>
+    
+    <Color x:Key="RedDarkWoodColor">#6D4259</Color>
+    <SolidColorBrush x:Key="RedDarkWoodBrush" Color="{ StaticResource RedDarkWoodColor}"/>
+
+    <Color x:Key="RedDarkWoodColorEn">#947586</Color>
+    <SolidColorBrush x:Key="RedDarkWoodBrushEn" Color="{ StaticResource RedDarkWoodColorEn}"/>
+
+    <Color x:Key="RedDarkWoodColorPress">#281821</Color>
+    <SolidColorBrush x:Key="RedDarkWoodBrushPress" Color="{ StaticResource RedDarkWoodColorPress}"/>
+
+    <Color x:Key="RedVeryDarkWoodColor">#332B38</Color>
+    <SolidColorBrush x:Key="RedVeryDarkWoodBrush" Color="{StaticResource RedVeryDarkWoodColor}"/>
+
+
+    <Color x:Key="ColorBaseUltraDark">#000000</Color>
+    <Color x:Key="ColorBaseDark">#5D5D5D</Color>
+    <Color x:Key="ColorBaseMedium">#BBBBBB</Color>
+    <Color x:Key="ColorBaseLight">#EBEBEB</Color>
+    <Color x:Key="ColorBaseUltraLight">#FFFFFF</Color>
+
+    <Color x:Key="ColorBlack">#000000</Color>
+
+    <SolidColorBrush x:Key="BrushBaseDarkUltra" Color="{StaticResource ColorBaseUltraDark}"/>
+    <SolidColorBrush x:Key="BrushBaseDark" Color="{StaticResource ColorBaseDark}"/>
+    <SolidColorBrush x:Key="BrushBaseMedium" Color="{StaticResource ColorBaseMedium}"/>
+    <SolidColorBrush x:Key="BrushBaseLight" Color="{StaticResource ColorBaseLight}"/>
+    <SolidColorBrush x:Key="BrushBaseLightUltra" Color="{StaticResource ColorBaseUltraLight}"/>
+
+
+</ResourceDictionary>

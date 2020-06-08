@@ -1,0 +1,20 @@
+﻿<Application x:Class="PCGManager.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:PCGManager"
+             StartupUri="MainView.xaml">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Styles\MainStyle.xaml"/>
+                <ResourceDictionary Source="Styles\Colors.xaml"/>
+                <ResourceDictionary Source="Styles\TextStyle.xaml"/>
+                <ResourceDictionary Source="Styles\ListViewStyle.xaml"/>
+                <ResourceDictionary Source="Styles\ButtonStyle.xaml"/>
+                <ResourceDictionary Source="Styles\GridStyle.xaml"/>
+                <ResourceDictionary Source="Styles\DataGridStyle.xaml"/>
+                
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

@@ -1,0 +1,58 @@
+﻿<Page x:Class="PCGManager.Views.LocalGamesView"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:PCGManager.Views"
+      xmlns:vm="clr-namespace:PCGManager.ViewModel"
+      
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="LocalGamesView">
+
+    <Page.DataContext>
+        <vm:LocalGamesViewModel/>
+    </Page.DataContext>
+   
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition Width="0.5*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Orientation="Vertical" Margin="10">
+            <StackPanel Orientation="Horizontal">
+                <Button Command="{Binding ShowFrameAddGameCommand}">Add</Button>
+                <Button Command="{Binding ShowFrameEditGameCommand}">Edit</Button>
+                <Button Command="{Binding RemoveCommand}">Remove</Button>
+            </StackPanel>
+            <ListView ItemsSource="{Binding Path=(vm:LocalGamesViewModel.LocalGames)}" SelectedItem="{Binding SelectedGame}">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn  DisplayMemberBinding="{Binding Path=name}">Name</GridViewColumn>
+                    </GridView>
+                </ListView.View>
+            </ListView>
+        </StackPanel>
+
+
+        <StackPanel Grid.Column="1" Margin="10">
+            <TextBlock Text="{Binding SelectedGame.name}" Foreground="White"/>
+            <Button>launch</Button>
+            <TextBlock Foreground="White">Game Install Path:</TextBlock>
+            <TextBox  Text="{Binding SelectedGameInstallPathProp}" IsReadOnly="True"></TextBox>
+            <TextBlock Foreground="White">Game Save Path:</TextBlock>
+            <TextBox  Text="{Binding SelectedGameSavePathProp}" IsReadOnly="True"></TextBox>
+            <Button Command="{Binding CreateLinkCommand}">Create link folder</Button>
+            <Button Command="{Binding CheckLinkCommand}">Check link status</Button>
+            <TextBlock Foreground="White">Game save mirror folder:</TextBlock>
+        </StackPanel>
+        
+        
+        <Frame Grid.Column="1"  Content="{Binding Frame}" NavigationUIVisibility="Hidden" >
+            
+
+
+        </Frame>
+    </Grid>
+</Page>

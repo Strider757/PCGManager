@@ -1,0 +1,45 @@
+﻿<Page x:Class="PCGManager.Views.addGameFrameView"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:PCGManager.Views"
+      xmlns:vm="clr-namespace:PCGManager.ViewModel"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="addGameFrameView"
+      Background="Black"
+      >
+
+    <Page.DataContext>
+        <vm:addGameFrameViewModel/>
+    </Page.DataContext>
+    
+        <Grid>
+        <StackPanel Margin="10" >
+            <TextBlock Text="AddGame" Foreground="White" FontSize="30" HorizontalAlignment="Center"></TextBlock>
+            <ListView ItemsSource="{Binding Games}" SelectedItem="{Binding SelectedGame}">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn DisplayMemberBinding="{Binding Path=name}">name</GridViewColumn>
+                    </GridView>
+                </ListView.View>
+            </ListView>
+
+            <TextBlock Foreground="White" Text="Game Path:"></TextBlock>
+            <TextBox Text="{Binding InstallPathProp, Mode=TwoWay}"></TextBox>
+            <Button Command="{Binding ChooseComman}">choose</Button>
+
+            <TextBlock Foreground="White" Text="Game Save Path:"></TextBlock>
+            <TextBox Text="{Binding GameSavePathProp, Mode=TwoWay}"></TextBox>
+            <Button Command="{Binding ChooseGameSaveFolderComman}">choose</Button>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="10" >
+                <Button Margin="10" Command="{Binding AddComman}">Add</Button>
+                <Button Margin="10" Command="{Binding CancelComman}">Cancel</Button>
+            </StackPanel>
+            <!--<TextBlock Text="{Binding SelectedGame.name}"></TextBlock>-->
+        </StackPanel>
+        
+        
+    </Grid>
+</Page>
